@@ -18,8 +18,8 @@ def courseListView(resquest):
         if courseSerializer.is_valid():
             courseSerializer.save()
             return Response(courseSerializer.data)
-        
-        return Response(courseSerializer.errors)
+        else:
+            return Response(courseSerializer.errors)
         
     
 @api_view(['GET','PUT','DELETE'])
@@ -41,7 +41,8 @@ def courseDetailView(resquest, pk ):
         if courseSerializer.is_valid():
             courseSerializer.save()
             return Response(courseSerializer.data)
-        return Response(courseSerializer.errors)
+        else:
+            return Response(courseSerializer.errors)
     
     elif resquest.method == 'DELETE':
         course.delete
