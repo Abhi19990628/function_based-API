@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'fbvapp',
     'rest_framework',
     'fbvapp2',
+    'fbvapp3'
     ]
 
 MIDDLEWARE = [
@@ -46,7 +47,7 @@ ROOT_URLCONF = 'FBVproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASEDIC('project')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -83,6 +83,7 @@ def SchooldetailsView(request, pk):
     if request.method == 'GET':
         schoolSerializer = SchoolSerializer(school)
         return Response(schoolSerializer.data)
+    
     elif request.method == 'PUT':
         schoolSerializer = SchoolSerializer(school, data=request.data)
         if schoolSerializer.is_valid():
@@ -93,5 +94,3 @@ def SchooldetailsView(request, pk):
     elif request.method == 'DELETE':
         school.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-
-    
